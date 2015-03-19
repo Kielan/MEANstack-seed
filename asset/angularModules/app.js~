@@ -1,0 +1,23 @@
+'use strict';
+
+var angular = require('angular');
+var ngCookies = require('angular-cookies');
+
+//angular modules
+require('./lib/angular-ui-router');
+require('./lib/permissionConfig');
+require('./controllers/index');
+
+//create and initialize properly for testing
+angular.element(document).ready(function() {
+
+    var requires = [
+	'ui.router',
+	'MEANApp.controllers'
+    ];
+
+    var app = angular.module('MEANApp', requires);
+
+    app.config(require('./routes'));
+    
+});

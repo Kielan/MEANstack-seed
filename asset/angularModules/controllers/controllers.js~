@@ -1,0 +1,7 @@
+'use strict';
+
+var controls = angular.module('MEANApp')
+
+controls.controller('NavControl', ['$scope', '$http', function($scope, $http) {
+    console.log('called');
+}]);

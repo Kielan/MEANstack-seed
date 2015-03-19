@@ -1,0 +1,86 @@
+{
+  "name": "MEANPermissions",
+  "version": "1.1.0",
+  "description": "permisssions access server in MEAN stack handling access server side without tokens",
+  "scripts": {
+    "start": "node server.js",
+    "buildClientJS": "browserify asset/angularModules/app.js > build/build.js",
+    "build": "npm run buildClientJS"
+  },
+  "browser": {
+    "angular": "./node_modules/angular/angular.js"
+  },
+  "browserify-shim": {
+    "angular": {
+      "exports": "global:angular"
+    },
+    "jquery": "global:$",
+    "angular-cookies": {
+      "depends": "angular",
+      "exports": "angular.module('ngCookies');"
+    }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "author": "kielan",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.3.14",
+    "angular-cookies": "^1.3.14",
+    "browserify": "^9.0.3",
+    "client-sessions": "^0.7.0",
+    "connect-multiparty": "^1.2.5",
+    "cookie-parser": "^1.3.4",
+    "ejs": "^2.3.1",
+    "express": "^4.11.2",
+    "gulp-filesize": "0.0.6",
+    "jquery": "^2.1.3",
+    "lodash": "^3.5.0",
+    "merge-stream": "^0.1.7",
+    "mongoose": "^3.8.24",
+    "morgan": "^1.5.1",
+    "uglify-js": "~2.3.6"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browser-sync": "~2.2.2",
+    "browserify-ngannotate": "^0.1.0",
+    "browserify-shim": "^3.8.3",
+    "gulp": "^3.8.11",
+    "gulp-angular-templatecache": "^1.3.0",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-changed": "^1.0.0",
+    "gulp-gzip": "^0.0.8",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^1.1.0",
+    "gulp-jshint": "^1.8.3",
+    "gulp-karma": "0.0.4",
+    "gulp-notify": "^2.0.0",
+    "gulp-protractor": "0.0.11",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "imagemin-pngcrush": "^0.1.0",
+    "jshint-stylish": "^1.0.0",
+    "karma": "^0.12.21",
+    "karma-browserify": "^4.0.0",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-coverage": "0.2.6",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "pretty-hrtime": "^1.0.0",
+    "protractor": "^1.2.0",
+    "run-sequence": "^0.3.6",
+    "tiny-lr": "0.0.9",
+    "uglifyify": "^2.5.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^0.1.1",
+    "watchify": "^2.4.0"
+  }
+}
