@@ -1,5 +1,3 @@
-module.exports = function(exports){
-
     var config = {
 
         /* List all the roles you wish to use in the app
@@ -96,4 +94,4 @@ module.exports = function(exports){
         return accessLevels;
     }
 
-}//(typeof exports === 'undefined' ? this['routingConfig'] = {} : exports);
+//(typeof exports === 'undefined' ? this['routingConfig'] = {} : exports);

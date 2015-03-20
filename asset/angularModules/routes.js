@@ -1,7 +1,11 @@
 'use strict';
 
-function Routes($routeProvider, $stateProvider, $locationProvider) {
+var permission = require('./lib/routingConfig');
 
+
+function Routes($stateProvider, $locationProvider) {
+    var access = permission.accessLevels;
+    
     $stateProvider.state('public', {
 	url: '/',
 	abstract: true,

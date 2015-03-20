@@ -1,7 +1,10 @@
 'use strict';
 
-var app = angular.module('MEANApp');
+var controllersModule = require('./index.js');
 
-app.controller('NavControl', ['$scope', '$http', function($scope, $http) {
+function NavBarControl($scope, $http) {
+
     console.log('called');
-}]);
+}
+
+controllersModule.controller('NavControl', NavBarControl);
